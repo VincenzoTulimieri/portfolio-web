@@ -6,8 +6,8 @@ export default function Home() {
   return (
     <>
       <HeroGeometric badge="Kokonut UI"
-            title1 = "Vincenzo Tulimieri"
-            title2 = "Full Stack Developer" />
+        title1="Vincenzo Tulimieri"
+        title2="Full Stack Developer" />
 
       <div className="text-center">
         <h1>progetti</h1>

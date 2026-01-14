@@ -3,6 +3,7 @@
 import { motion, Variants } from "framer-motion";
 import { Circle } from "lucide-react";
 import { cn } from "@/lib/utils";
+import Image from "next/image";
 
 
 const fadeUpVariants: Variants = {
@@ -81,7 +82,7 @@ export function HeroGeometric({
     title2?: string;
 }) {
     // HO RIMOSSO LA DEFINIZIONE DI fadeUpVariants DA QUI DENTRO
-    
+
     return (
         <div className="relative min-h-screen w-full flex items-center justify-center overflow-hidden bg-[#030303]">
             <div className="absolute inset-0 bg-gradient-to-br from-indigo-500/[0.05] via-transparent to-rose-500/[0.05] blur-3xl" />
@@ -136,12 +137,15 @@ export function HeroGeometric({
                         variants={fadeUpVariants}
                         initial="hidden"
                         animate="visible"
-                        className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/[0.03] border border-white/[0.08] mb-8 md:mb-12"
+                        className="inline-flex items-center gap-2 px-3 py-1 rounded-full mb-8 md:mb-12"
                     >
-                        <Circle className="h-2 w-2 fill-rose-500/80" />
-                        <span className="text-sm text-white/60 tracking-wide">
-                            {badge}
-                        </span>
+                        <Image
+                            src="/foto-profilo.jpeg"
+                            alt="Foto Profilo"
+                            width={400}  
+                            height={400} 
+                            className="rounded-full object-cover"
+                        />
                     </motion.div>
 
                     <motion.div
@@ -168,8 +172,7 @@ export function HeroGeometric({
                         animate="visible"
                     >
                         <p className="text-base sm:text-lg md:text-xl text-white/40 mb-8 leading-relaxed font-light tracking-wide max-w-xl mx-auto px-4">
-                            Crafting exceptional digital experiences through
-                            innovative design and cutting-edge technology.
+                            JavaScript, React js, Bootstrap, Node js, Express, MySQL, TypeScript
                         </p>
                     </motion.div>
                 </div>
