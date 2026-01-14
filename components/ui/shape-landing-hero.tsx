@@ -137,15 +137,19 @@ export function HeroGeometric({
                         variants={fadeUpVariants}
                         initial="hidden"
                         animate="visible"
-                        className="inline-flex items-center gap-2 px-3 py-1 rounded-full mb-8 md:mb-12"
+                        className="flex items-center justify-center mb-10 md:mb-16"
                     >
-                        <Image
-                            src="/foto-profilo.jpeg"
-                            alt="Foto Profilo"
-                            width={400}  
-                            height={400} 
-                            className="rounded-full object-cover"
-                        />
+                        <div className="relative w-[200px] h-[280px] md:w-[350px] md:h-[500px] flex-shrink-0">
+                            <Image
+                                src="/foto-profilo.jpeg"
+                                alt="Vincenzo Tulimieri"
+                                fill
+                                sizes="(max-width: 768px) 200px, 400px"
+                                className="rounded-full object-cover border-4 border-white/5 shadow-[0_0_50px_rgba(255,255,255,0.05)]"
+                                priority
+                            />
+                            <div className="absolute inset-0 rounded-full bg-indigo-500/10 blur-[60px] -z-10" />
+                        </div>
                     </motion.div>
 
                     <motion.div
