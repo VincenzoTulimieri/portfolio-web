@@ -1,6 +1,14 @@
 @import "tailwindcss";
 @import "tw-animate-css";
 
+html{
+  scroll-behavior: smooth;
+}
+
+:target{
+  scroll-margin-top: 80 px;
+}
+
 @custom-variant dark (&:is(.dark *));
 
 @theme inline {
