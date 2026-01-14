@@ -9,7 +9,7 @@ export default function Home() {
         title1="Vincenzo Tulimieri"
         title2="Full Stack Developer" />
 
-      <div className="text-center">
+      <div id="projects" className="text-center">
         <h1>progetti</h1>
       </div>
     </>

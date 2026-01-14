@@ -4,10 +4,10 @@ import "./globals.css";
 import { NavBar } from "@/components/ui/tubelight-navbar"
 
 const navItems = [
-  { name: 'Home', url: '/' },
+  { name: 'Home', url: '#home' },
+  { name: 'Projects', url: '#projects' },
   { name: 'About', url: '#' },
-  { name: 'Projects', url: '#' },
-  { name: 'Resume', url: '#' }
+  { name: 'Contact', url: '#' }
 ]
 
 
