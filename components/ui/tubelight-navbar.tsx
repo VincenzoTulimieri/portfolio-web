@@ -5,7 +5,14 @@ import { motion } from "framer-motion"
 import Link from "next/link"
 import { LucideIcon } from "lucide-react"
 import { cn } from "@/lib/utils"
+import { Home, User, Briefcase, FileText } from 'lucide-react'
 
+const iconMap: Record<string, LucideIcon> = {
+  Home: Home,
+  About: User,
+  Projects: Briefcase,
+  Resume: FileText,
+}
 interface NavItem {
   name: string
   url: string
@@ -40,7 +47,7 @@ export function NavBar({ items, className }: NavBarProps) {
     >
       <div className="flex items-center gap-3 bg-background/5 border border-border backdrop-blur-lg py-1 px-1 rounded-full shadow-lg">
         {items.map((item) => {
-          const Icon = item.icon
+          const Icon = iconMap[item.name]
           const isActive = activeTab === item.name
 
           return (
@@ -55,7 +62,7 @@ export function NavBar({ items, className }: NavBarProps) {
               )}
             >
               <span className="hidden md:inline">{item.name}</span>
-             {Icon &&(<span className="md:hidden">
+              {Icon && (<span className="md:hidden">
                 <Icon size={18} strokeWidth={2.5} />
               </span>)}
               {isActive && (

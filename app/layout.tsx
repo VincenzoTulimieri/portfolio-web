@@ -1,15 +1,14 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-import { Home, User, Briefcase, FileText } from 'lucide-react'
 import { NavBar } from "@/components/ui/tubelight-navbar"
 
-  const navItems = [
-    { name: 'Home', url: '/' },
-    { name: 'About', url: '#'  },
-    { name: 'Projects', url: '/my-projects' },
-    { name: 'Resume', url: '#'}
-  ]
+const navItems = [
+  { name: 'Home', url: '/'},
+  { name: 'About', url: '#' },
+  { name: 'Projects', url: '/my-projects' },
+  { name: 'Resume', url: '#' }
+]
 
 
 const geistSans = Geist({
@@ -35,12 +34,14 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased dark`}
       >
         <header>
           <NavBar items={navItems} />
         </header>
-        {children}
+        <main className="pt-10 pb-24 sm:pt-24 sm:pb-10 px-4">
+          {children}
+        </main>
       </body>
     </html>
   );
