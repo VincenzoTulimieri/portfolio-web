@@ -2,10 +2,9 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { NavBar } from "@/components/ui/tubelight-navbar"
-import { HeroGeometric } from "@/components/ui/shape-landing-hero";
 
 const navItems = [
-  { name: 'Home', url: '/'},
+  { name: 'Home', url: '/' },
   { name: 'About', url: '#' },
   { name: 'Projects', url: '#' },
   { name: 'Resume', url: '#' }
@@ -37,9 +36,6 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased dark`}
       >
-        {/* <HeroGeometric badge="Kokonut UI"
-            title1 = "Vincenzo Tulimieri"
-            title2 = "Full Stack Developer" /> */}
         <header>
           <NavBar items={navItems} />
         </header>
