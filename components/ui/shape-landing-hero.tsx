@@ -139,7 +139,7 @@ export function HeroGeometric({
                         animate="visible"
                         className="flex items-center justify-center mb-10 md:mb-16"
                     >
-                        <div className="relative w-[200px] h-[280px] md:w-[350px] md:h-[500px] flex-shrink-0">
+                        <div className="relative w-[250px] h-[360px] md:w-[350px] md:h-[450px] flex-shrink-0">
                             <Image
                                 src="/foto-profilo.jpeg"
                                 alt="Vincenzo Tulimieri"

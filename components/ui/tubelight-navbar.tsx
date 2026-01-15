@@ -3,15 +3,15 @@
 import React, { useEffect, useState } from "react"
 import { motion } from "framer-motion"
 import Link from "next/link"
-import { LucideIcon } from "lucide-react"
+import { Contact, LucideIcon, Mail, Store } from "lucide-react"
 import { cn } from "@/lib/utils"
 import { Home, User, Briefcase, FileText } from 'lucide-react'
 
 const iconMap: Record<string, LucideIcon> = {
   Home: Home,
   About: User,
-  Projects: Briefcase,
-  Resume: FileText,
+  Projects: FileText,
+  Contact: Mail,
 }
 interface NavItem {
   name: string
