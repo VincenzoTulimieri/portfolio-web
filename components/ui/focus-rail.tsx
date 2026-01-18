@@ -226,9 +226,6 @@ export function FocusRail({
                 style={{
                   transformStyle: "preserve-3d",
                 }}
-                onClick={() => {
-                  if (offset !== 0) setActive((p) => p + offset);
-                }}
               >
 
                 <div className="relative h-full w-full overflow-hidden rounded-2xl" onClick={(e) => {
