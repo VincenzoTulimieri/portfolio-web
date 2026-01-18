@@ -76,31 +76,6 @@ export function FocusRail({
     setActive((p) => p + 1);
   }, [loop, active, count]);
 
-
-  // const onWheel = React.useCallback(
-  //   (e: React.WheelEvent) => {
-  //     const now = Date.now();
-
-  //     if (now - lastWheelTime.current < 400) return;
-
-
-  //     const isHorizontal = Math.abs(e.deltaX) > Math.abs(e.deltaY);
-  //     const delta = isHorizontal ? e.deltaX : e.deltaY;
-
-
-  //     if (Math.abs(delta) > 20) {
-  //       if (delta > 0) {
-  //         handleNext();
-  //       } else {
-  //         handlePrev();
-  //       }
-  //       lastWheelTime.current = now;
-  //     }
-  //   },
-  //   [handleNext, handlePrev]
-  // );
-
-
   React.useEffect(() => {
     if (!autoPlay || isHovering) return;
     const timer = setInterval(() => handleNext(), interval);
@@ -141,7 +116,6 @@ export function FocusRail({
       onMouseLeave={() => setIsHovering(false)}
       tabIndex={0}
       onKeyDown={onKeyDown}
-    // onWheel={onWheel}
     >
 
       <div className="absolute inset-0 z-0 pointer-events-none">
@@ -226,16 +200,16 @@ export function FocusRail({
                 style={{
                   transformStyle: "preserve-3d",
                 }}
-              >
-
-                <div className="relative h-full w-full overflow-hidden rounded-2xl" onClick={(e) => {
+                onClick={(e) => {
                   e.stopPropagation()
                   if (isCenter) {
                     setZoomItem(item);
                   } else {
                     setActive(absIndex);
                   }
-                }}>
+                }}
+              >
+                <div className="relative h-full w-full overflow-hidden rounded-2xl">
                   {item.videoSrc ? (
                     <video
                       src={item.videoSrc}
@@ -294,13 +268,13 @@ export function FocusRail({
           </div>
 
           <div className="flex items-center gap-4">
-            <div className="flex items-center gap-1 rounded-full bg-neutral-900/80 p-1 ring-1 ring-white/10 backdrop-blur-md z-50">
+            <div className="flex items-center gap-1 rounded-full bg-neutral-900/80 p-1 ring-1 ring-white/10 backdrop-blur-md z-60">
               <button
                 onClick={(e) =>{
                   e.stopPropagation()
                   handlePrev()
                 }}
-                className="rounded-full p-3 text-neutral-400 transition hover:bg-white/10 hover:text-white active:scale-95  z-50"
+                className="rounded-full p-3 text-neutral-400 transition hover:bg-white/10 hover:text-white active:scale-95  z-60"
                 aria-label="Previous"
               >
                 <ChevronLeft className="h-5 w-5" />
@@ -336,18 +310,16 @@ export function FocusRail({
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 exit={{ opacity: 0 }}
-                // fixed copre tutto lo schermo, z-[100] sta sopra a tutto
                 className="fixed inset-0 z-[100] flex items-center justify-center bg-black/90 p-4 backdrop-blur-sm"
-                onClick={closeZoom} // Chiude se clicchi sullo sfondo
+                onClick={closeZoom} 
               >
                 <motion.div
                   initial={{ scale: 0.9, y: 20 }}
                   animate={{ scale: 1, y: 0 }}
                   exit={{ scale: 0.9, y: 20 }}
                   className="relative aspect-video w-full max-w-5xl overflow-hidden rounded-3xl border border-white/10 bg-neutral-900"
-                  onClick={(e) => e.stopPropagation()} // Impedisce di chiudere se clicchi sulla foto
-                >
-                  {/* Tasto chiudi */}
+                  onClick={(e) => e.stopPropagation()} 
+                >               
                   <button
                     onClick={closeZoom}
                     className="absolute right-4 top-4 z-10 rounded-full bg-black/50 p-2 text-white hover:bg-white/20"
@@ -355,7 +327,6 @@ export function FocusRail({
                     <X className="h-6 w-6" />
                   </button>
 
-                  {/* Mostra Video o Foto */}
                   {zoomItem.videoSrc ? (
                     <video src={zoomItem.videoSrc} autoPlay loop controls className="h-full w-full object-contain" />
                   ) : (
