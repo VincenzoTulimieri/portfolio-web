@@ -72,16 +72,27 @@ function ElegantShape({
     );
 }
 
+// tipizzazione mydate
+interface MyDateItem {
+    id: number;
+    name: string;
+    imgSrc?: string;
+    designation: string;
+    description: string;
+}
+
 export function HeroGeometric({
     badge = "Design Collective",
     title1 = "Elevate Your Digital Vision",
     title2 = "Crafting Exceptional Websites",
+    myDate
 }: {
     badge?: string;
     title1?: string;
     title2?: string;
+    myDate?: MyDateItem[]
 }) {
-
+    console.log(myDate)
     return (
         <div id="home" className="relative min-h-screen w-full flex items-center justify-center overflow-hidden bg-[#030303]">
             <div className="absolute inset-0 bg-gradient-to-br from-indigo-500/[0.05] via-transparent to-rose-500/[0.05] blur-3xl" />
@@ -140,8 +151,8 @@ export function HeroGeometric({
                     >
                         <div className="relative w-[250px] h-[360px] md:w-[350px] md:h-[450px] flex-shrink-0">
                             <Image
-                                src="/foto-profilo.jpeg"
-                                alt="Vincenzo Tulimieri"
+                                src={myDate?.[0]?.imgSrc || '/foto-profilo.jpeg'}
+                                alt={myDate?.[0]?.name || "Vincenzo Tulimieri"}
                                 fill
                                 sizes="(max-width: 768px) 200px, 400px"
                                 className="rounded-full object-cover border-4 border-white/5 shadow-[0_0_50px_rgba(255,255,255,0.05)]"
@@ -175,7 +186,7 @@ export function HeroGeometric({
                         animate="visible"
                     >
                         <p className="text-base sm:text-lg md:text-xl text-white/40 mb-8 leading-relaxed font-light tracking-wide max-w-xl mx-auto px-4">
-                            JavaScript, React js, Bootstrap, Node js, Express, MySQL, TypeScript
+                            {myDate?.[1].designation || 'HTML, CSS, JavaScript, React js, Bootstrap, Node js, Express, MySQL, TypeScript'}
                         </p>
                     </motion.div>
                 </div>
