@@ -1,9 +1,10 @@
-import Image from "next/image";
+// importazioni 
 import Link from "next/link";
 import { HeroGeometric } from "@/components/ui/shape-landing-hero";
 import { FocusRail, type FocusRailItem } from "@/components/ui/focus-rail";
 import { TextShimmer } from '@/components/ui/text-shimmer';
 import { InteractiveTiltCard } from "@/components/ui/tilt-card";
+import { Download } from "lucide-react";
 
 // Dati dei progetti
 const projects: FocusRailItem[] = [
@@ -63,7 +64,7 @@ const myDate: {
     {
       id: 2,
       imgSrc: "/attestato-boolean.png",
-      name: "Certificato Boolean",
+      name: "Attestato Boolean",
       designation: "HTML, CSS, JavaScript, React js, Bootstrap, Node js, Express, MySQL, TypeScript",
       description: "A gennaio 2025 ho deciso di iscrivermi all'Academy di Boolean, dove, oltre a imparare i linguaggi di programmazione, ho incontrato persone fantastiche. È stato un percorso bellissimo ma anche impegnativo; grazie alla perseveranza, sono riuscito a raggiungere il mio obiettivo. Superando l'esame finale, ho ottenuto il mio primo certificato da Full-Stack Web Developer con specializzazione in Frontend e React."
     },
@@ -100,6 +101,7 @@ export default function Home() {
                 glareEffect={true}
                 glareIntensity={0.4}
               />
+              <p className="mt-10 font-mono text-lg md:text-xl leading-relaxed">{myDate[1].name}</p>
             </div>
             <div style={{ width: "300px", height: "400px" }}>
               <InteractiveTiltCard
@@ -113,6 +115,15 @@ export default function Home() {
                 glareEffect={true}
                 glareIntensity={0.4}
               />
+              <p className="mt-10 font-mono text-lg md:text-xl leading-relaxed">Curriculum Vitae</p>
+              <a
+                href="/CV-vincenzo-tulimieri.pdf" 
+                download="CV_Vincenzo_Tulimieri.pdf" 
+                className="mt-4 inline-flex items-center justify-center px-6 py-2 border border-white/20 rounded-full bg-white/5 text-white font-mono text-sm hover:bg-white hover:text-black transition-colors duration-300 gap-2"
+              >
+                <Download size={16} className="group-hover:animate-bounce " />
+                <span className="font-mono">Scarica CV</span>
+              </a>
             </div>
           </div>
         </div>
