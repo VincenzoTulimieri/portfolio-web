@@ -6,7 +6,7 @@ import { Footer } from "@/components/Footer";
 
 const navItems = [
   { name: 'Home', url: '#home' },
-  { name: 'About', url: '#about' },
+  { name: 'About Me', url: '#about' },
   { name: 'Projects', url: '#projects' },
   { name: 'Contact', url: '#contact' }
 ]
