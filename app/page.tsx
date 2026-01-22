@@ -73,7 +73,7 @@ const myDate: {
       imgSrc: "/foto-CV.png",
       name: "Curriculum Vitae",
       designation: "HTML, CSS, JavaScript, React js, Bootstrap, Node js, Express, MySQL, TypeScript",
-      description: "Ecco il mio Curriculum Vitae"
+      description: "Ecco qui il mio Curriculum Vitae"
     }
   ]
 
@@ -124,10 +124,13 @@ export default function Home() {
                   />
                 </div>
                 <h3 className="mt-8 font-mono text-xl font-bold text-white">{myDate[2].name}</h3>
+                <p className="mt-10 font-mono text-sm leading-relaxed text-neutral-400 max-w-[320px] text-center">
+                  {myDate[2].description}
+                </p>
                 <a
                   href="/CV-vincenzo-tulimieri.pdf"
                   download="CV_Vincenzo_Tulimieri.pdf"
-                  className="mt-6 inline-flex items-center justify-center px-8 py-3 border border-white/20 rounded-full bg-white/5 text-white font-mono text-sm hover:bg-white hover:text-black transition-all duration-300 gap-2 group"
+                  className="mt-2 inline-flex items-center justify-center px-8 py-3 border border-white/20 rounded-full bg-white/5 text-white font-mono text-sm hover:bg-white hover:text-black transition-all duration-300 gap-2 group"
                 >
                   <Download size={18} className="group-hover:animate-bounce" />
                   <span>Scarica CV</span>
