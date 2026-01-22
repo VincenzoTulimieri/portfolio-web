@@ -9,7 +9,7 @@ import { Home, User, Briefcase, FileText } from 'lucide-react'
 
 const iconMap: Record<string, LucideIcon> = {
   Home: Home,
-  About: User,
+  "About Me": User,
   Projects: FileText,
   Contact: Mail,
 }
