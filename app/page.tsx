@@ -68,6 +68,13 @@ const myDate: {
       designation: "HTML, CSS, JavaScript, React js, Bootstrap, Node js, Express, MySQL, TypeScript",
       description: "A gennaio 2025 ho deciso di iscrivermi all'Academy di Boolean, dove, oltre a imparare i linguaggi di programmazione, ho incontrato persone fantastiche. È stato un percorso bellissimo ma anche impegnativo; grazie alla perseveranza, sono riuscito a raggiungere il mio obiettivo. Superando l'esame finale, ho ottenuto il mio primo certificato da Full-Stack Web Developer con specializzazione in Frontend e React."
     },
+      {
+      id: 3,
+      imgSrc: "/foto-CV.png",
+      name: "Curriculum Vitae",
+      designation: "HTML, CSS, JavaScript, React js, Bootstrap, Node js, Express, MySQL, TypeScript",
+      description: "Ecco il mio Curriculum Vitae"
+    }
   ]
 
 export default function Home() {
@@ -81,42 +88,51 @@ export default function Home() {
           </TextShimmer>
         </div>
         <div className="text-center">
-          <div className="flex flex-col md:flex-row items-center justify-center gap-10 md:gap-20 w-full max-w-6xl mx-auto">
-            <div style={{ width: "300px", height: "400px" }}>
-              <InteractiveTiltCard
-                image={{
-                  src: "/attestato-boolean.png",
-                  alt: "Blue flower in a vase",
-                }}
-                tiltFactor={20}
-                hoverScale={1.07}
-                shadowIntensity={0.6}
-                glareEffect={true}
-                glareIntensity={0.4}
-              />
-              <p className="mt-10 font-mono text-lg md:text-xl leading-relaxed">{myDate[1].name}</p>
-            </div>
-            <div style={{ width: "300px", height: "400px" }}>
-              <InteractiveTiltCard
-                image={{
-                  src: "/foto-CV.png",
-                  alt: "Blue flower in a vase",
-                }}
-                tiltFactor={20}
-                hoverScale={1.07}
-                shadowIntensity={0.6}
-                glareEffect={true}
-                glareIntensity={0.4}
-              />
-              <p className="mt-10 font-mono text-lg md:text-xl leading-relaxed">Curriculum Vitae</p>
-              <a
-                href="/CV-vincenzo-tulimieri.pdf" 
-                download="CV_Vincenzo_Tulimieri.pdf" 
-                className="mt-4 inline-flex items-center justify-center px-6 py-2 border border-white/20 rounded-full bg-white/5 text-white font-mono text-sm hover:bg-white hover:text-black transition-colors duration-300 gap-2"
-              >
-                <Download size={16} className="group-hover:animate-bounce " />
-                <span className="font-mono">Scarica CV</span>
-              </a>
+          <div className="text-center px-4 w-full">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-16 md:gap-24 w-full max-w-5xl mx-auto items-start">
+              <div className="flex flex-col items-center">
+                <div className="w-[280px] h-[380px] sm:w-[300px] sm:h-[400px]">
+                  <InteractiveTiltCard
+                    image={{
+                      src: myDate[1].imgSrc || "",
+                      alt: myDate[1].name,
+                    }}
+                    tiltFactor={20}
+                    hoverScale={1.07}
+                    shadowIntensity={0.6}
+                    glareEffect={true}
+                    glareIntensity={0.4}
+                  />
+                </div>
+                <h3 className="mt-8 font-mono text-xl font-bold text-white">{myDate[1].name}</h3>
+                <p className="mt-10 font-mono text-sm leading-relaxed text-neutral-400 max-w-[320px] text-center">
+                  {myDate[1].description}
+                </p>
+              </div>
+              <div className="flex flex-col items-center">
+                <div className="w-[280px] h-[380px] sm:w-[300px] sm:h-[400px]">
+                  <InteractiveTiltCard
+                    image={{
+                      src: myDate[2].imgSrc || "",
+                      alt: myDate[2].name,
+                    }}
+                    tiltFactor={20}
+                    hoverScale={1.07}
+                    shadowIntensity={0.6}
+                    glareEffect={true}
+                    glareIntensity={0.4}
+                  />
+                </div>
+                <h3 className="mt-8 font-mono text-xl font-bold text-white">{myDate[2].name}</h3>
+                <a
+                  href="/CV-vincenzo-tulimieri.pdf"
+                  download="CV_Vincenzo_Tulimieri.pdf"
+                  className="mt-6 inline-flex items-center justify-center px-8 py-3 border border-white/20 rounded-full bg-white/5 text-white font-mono text-sm hover:bg-white hover:text-black transition-all duration-300 gap-2 group"
+                >
+                  <Download size={18} className="group-hover:animate-bounce" />
+                  <span>Scarica CV</span>
+                </a>
+              </div>
             </div>
           </div>
         </div>
