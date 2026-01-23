@@ -11,7 +11,7 @@ const projects: FocusRailItem[] = [
   {
     id: 1,
     title: "Visual Gaming",
-    description: "Experience the vibrant nightlife and illuminated streets of Shinjuku.",
+    description: "Visual Gaming è una web app dedicata al mondo dei videogiochi, pensata per esplorare, confrontare e salvare titoli in una wishlist personale. Ho usato React per la gestione dei componenti e dello stato dell’app, Bootstrap per un layout e CSS Vanilla per la personalizzazione grafica e lo stile. Le funzionalità principali sono Visualizzazione di una libreria di videogiochi, Filtri per categoria e ordinamento, Ricerca per titolo, Sistema di selezione per il confronto, Interfaccia moderna e user-friendly a tema gaming.",
     meta: "JavaScript • React js • Bootstrap • Node js ",
     videoSrc: "/video-visualgaming.mkv",
     imageSrc: "/visualgaming-home.png",
@@ -20,29 +20,29 @@ const projects: FocusRailItem[] = [
   {
     id: 2,
     title: "Boolshop",
-    description: "E-commerce sviluppata in team.",
+    description: "BoolShop è un progetto full-stack sviluppato in team con suddivisione dei task, collaborazione e integrazione frontend–backend, pensato come un E-commerce dedicato alla vendita di album musicali, con un’interfaccia moderna e un flusso completo di navigazione e consultazione dei prodotti. Le funzionalità principali sono Homepage con sezioni dedicate ad album più venduti e più recenti navigazione tra negozio e artisti, visualizzazione dettagliata dei prodotti, gestione dei dati tramite backend dedicato, layout responsive e coerente su diversi dispositivi, gestione del carrello è checkout prodotti",
     meta: "Team Work • React js • Node Js • MySql",
     videoSrc: "/video-boolshop.mkv",
     imageSrc: "/boolshop-homepage.png",
-    href: "#nordic",
+    href: "https://github.com/VincenzoTulimieri/boolshop-react-main",
   },
   {
     id: 3,
     title: "Spotyfy",
-    description: "Layout grafico della web app di spotify",
+    description: "Layout dell'applicazione web Spotify realizzato completamente in HTML e CSS vanilla, senza framework o componenti preconfezionati. Il progetto mette in evidenza la capacità di costruire interfacce responsive partendo dalle basi, con attenzione a struttura semantica, adattabilità su diversi dispositivi e fedeltà al design.",
     meta: "HTML • CSS • Resposive",
     videoSrc: "/video-spotify.mkv",
     imageSrc: "/spotify-layout.png",
-    href: "#sahara",
+    href: "https://github.com/VincenzoTulimieri/html-css-spotifyweb/tree/main/day-3",
   },
   {
     id: 4,
     title: "Dropbox",
-    description: "Layout grafico del sito di Dropbox.",
+    description: "Layout del sito web Dropbox  sviluppato completamente in HTML e CSS vanilla, senza l’uso di framework o componenti predefiniti. Il progetto mette in evidenza la capacità di strutturare un’interfaccia web curando layout, gerarchia visiva e organizzazione dei contenuti, partendo dalle basi del front-end",
     meta: "HTML • CSS",
     videoSrc: "/video-dropbox.mkv",
     imageSrc: "/screenshot-dropbox.png",
-    href: "#cyber",
+    href: "https://github.com/VincenzoTulimieri/htmlcss-dropboxr",
   }
 ];
 
@@ -68,7 +68,7 @@ const myDate: {
       designation: "HTML, CSS, JavaScript, React js, Bootstrap, Node js, Express, MySQL, TypeScript",
       description: "A gennaio 2025 ho deciso di iscrivermi all'Academy di Boolean, dove, oltre a imparare i linguaggi di programmazione, ho incontrato persone fantastiche. È stato un percorso bellissimo ma anche impegnativo; grazie alla perseveranza, sono riuscito a raggiungere il mio obiettivo. Superando l'esame finale, ho ottenuto il mio primo certificato da Full-Stack Web Developer con specializzazione in Frontend e React."
     },
-      {
+    {
       id: 3,
       imgSrc: "/foto-CV.png",
       name: "Curriculum Vitae",
@@ -130,7 +130,7 @@ export default function Home() {
                 <a
                   href="/CV-vincenzo-tulimieri.pdf"
                   download="CV_Vincenzo_Tulimieri.pdf"
-                  className="mt-2 inline-flex items-center justify-center px-8 py-3 border border-white/20 rounded-full bg-white/5 text-white font-mono text-sm hover:bg-white hover:text-black transition-all duration-300 gap-2 group"
+                  className="mt-5 inline-flex items-center justify-center px-8 py-3 border border-white/20 rounded-full bg-white/5 text-white font-mono text-sm hover:bg-white hover:text-black transition-all duration-300 gap-2 group"
                 >
                   <Download size={18} className="group-hover:animate-bounce" />
                   <span>Scarica CV</span>
@@ -144,7 +144,7 @@ export default function Home() {
         <div className="mb-12 text-center">
           <h1 className="text-4xl font-bold text-white mb-2">I Miei Progetti</h1>
         </div>
-        <FocusRail items={projects} autoPlay={true} loop={true} />
+        <FocusRail items={projects} autoPlay={false} loop={true} />
       </section>
     </>
   );
