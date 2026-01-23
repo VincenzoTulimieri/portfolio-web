@@ -109,7 +109,7 @@ export function FocusRail({
   return (
     <div
       className={cn(
-        "group relative flex h-[600px] w-full flex-col overflow-hidden bg-neutral-950 text-white outline-none select-none overflow-x-hidden",
+        "group relative flex min-h-[850px] w-full flex-col overflow-hidden bg-neutral-950 text-white outline-none select-none overflow-x-hidden",
         className
       )}
       onMouseEnter={() => setIsHovering(true)}
@@ -240,7 +240,7 @@ export function FocusRail({
 
         </motion.div>
         <div className="mx-auto mt-12 flex w-full max-w-4xl flex-col items-center justify-between gap-6 md:flex-row pointer-events-auto">
-          <div className="flex flex-1 flex-col items-center text-center md:items-start md:text-left h-32 justify-center">
+          <div className="flex flex-1 flex-col items-center text-center md:items-start md:text-left h-[220px] md:h-[180px] justify-start pt-4">
             <AnimatePresence mode="wait">
               <motion.div
                 key={activeItem.id}
@@ -259,7 +259,7 @@ export function FocusRail({
                   {activeItem.title}
                 </h2>
                 {activeItem.description && (
-                  <p className="max-w-md text-neutral-400">
+                  <p className="max-w-2xl text-neutral-400 leading-relaxed text-sm md:text-base">
                     {activeItem.description}
                   </p>
                 )}
