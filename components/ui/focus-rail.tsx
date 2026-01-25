@@ -240,7 +240,7 @@ export function FocusRail({
 
         </motion.div>
         <div className="mx-auto mt-12 flex w-full max-w-4xl flex-col items-center justify-between gap-6 md:flex-row pointer-events-auto">
-          <div className="flex flex-1 flex-col items-center text-center md:items-start md:text-left h-[220px] md:h-[180px] justify-start pt-4">
+          <div className="flex flex-1 flex-col items-center text-center md:items-start md:text-left h-[320px] sm:h-[280px] md:h-[200px] lg:h-[180px] justify-start pt-4 overflow-visible">
             <AnimatePresence mode="wait">
               <motion.div
                 key={activeItem.id}
