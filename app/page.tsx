@@ -20,7 +20,7 @@ const projects: FocusRailItem[] = [
   {
     id: 2,
     title: "Boolshop",
-    description: "BoolShop è un progetto full-stack sviluppato in team con suddivisione dei task, collaborazione e integrazione frontend–backend, pensato come un E-commerce dedicato alla vendita di album musicali, con un’interfaccia moderna e un flusso completo di navigazione e consultazione dei prodotti. Le funzionalità principali sono Homepage con sezioni dedicate ad album più venduti e più recenti navigazione tra negozio e artisti, visualizzazione dettagliata dei prodotti, gestione dei dati tramite backend dedicato, layout responsive e coerente su diversi dispositivi, gestione del carrello è checkout prodotti",
+    description: "BoolShop è un progetto full-stack sviluppato in team con suddivisione dei task, collaborazione e integrazione frontend–backend, pensato come un E-commerce dedicato alla vendita di album musicali, con un’interfaccia moderna e un flusso completo di navigazione e consultazione dei prodotti. Le funzionalità principali sono Homepage con sezioni dedicate ad album più venduti e più recenti navigazione tra negozio e artisti, visualizzazione dettagliata dei prodotti, gestione dei dati tramite backend dedicato, layout responsive e coerente su diversi dispositivi, gestione del carrello è checkout prodotti.",
     meta: "Team Work • React js • Node Js • MySql",
     videoSrc: "/video-boolshop.mkv",
     imageSrc: "/boolshop-homepage.png",
@@ -59,7 +59,10 @@ const myDate: {
       imgSrc: "/foto-profilo.jpeg",
       name: "Vincenzo Tulimieri",
       designation: "Junior Full-Stack Developer",
-      description: "Mi considero una persona curiosa e motivata dalle sfide. Nel mio percorso formativo e professionale ho imparato a lavorare in squadra e ad affrontare i problemi con un approccio analitico e creativo. Unisco la mia passione per la Psicologia al mondo IT, convinto che comprendere le persone e le loro esigenze sia la chiave per creare soluzioni tecnologiche più efficaci e relazioni professionali più solide."
+      description: `Sono un ragazzo da sempre affascinato dal mondo della tecnologia e dall’ambito IT, che sogna di trasformare in una vera e propria professione. Amo mettermi in gioco, affrontare nuove sfide e accrescere continuamente le mie competenze, sia dal punto di vista tecnico che umano.
+      Nel mio percorso formativo e professionale ho imparato a lavorare in squadra e ad affrontare i problemi con un approccio analitico e creativo, cercando sempre soluzioni efficaci e orientate alle reali esigenze delle persone.
+      Ho maturato esperienza anche in contesti strutturati, come il ruolo di responsabile alla sicurezza presso il Vittoriano, dove ho sviluppato senso di responsabilità, attenzione ai dettagli, capacità organizzative e problem solving.
+      Nel tempo libero coltivo diverse passioni, tra cui videogiochi, sport e manga, che alimentano la mia curiosità e il pensiero strategico. Unisco inoltre il mio interesse per la Psicologia al mondo IT, convinto che comprendere le persone sia la chiave per creare soluzioni tecnologiche più efficaci e relazioni professionali solide.`
     },
     {
       id: 2,
@@ -83,7 +86,7 @@ export default function Home() {
       <HeroGeometric title1={myDate[0].name} title2={myDate[0].designation} myDate={myDate} />
       <section id="about" className="min-h-screen overflow-x-hidden w-full bg-neutral-950 flex flex-col items-center pt-30">
         <div className="text-center mb-20 w-full max-w-7xl mx-auto px-2 md:px-0">
-          <TextShimmer className="font-mono text-lg md:text-xl leading-relaxed" duration={5}>
+          <TextShimmer className="font-sans text-base md:text-xl leading-relaxed text-justify p-3 md:text-start whitespace-pre-line font-bold" duration={5}>
             {myDate[0].description}
           </TextShimmer>
         </div>
@@ -104,8 +107,8 @@ export default function Home() {
                     glareIntensity={0.4}
                   />
                 </div>
-                <h3 className="mt-8 font-mono text-xl font-bold text-white">{myDate[1].name}</h3>
-                <p className="mt-10 font-mono text-sm leading-relaxed text-neutral-400 max-w-[320px] text-center">
+                <h3 className="mt-8 font-sans text-xl font-bold text-white">{myDate[1].name}</h3>
+                <p className="mt-10 font-sans text-base leading-relaxed text-neutral-400 max-w-[320px] text-justify md:text-start">
                   {myDate[1].description}
                 </p>
               </div>
@@ -123,14 +126,14 @@ export default function Home() {
                     glareIntensity={0.4}
                   />
                 </div>
-                <h3 className="mt-8 font-mono text-xl font-bold text-white">{myDate[2].name}</h3>
-                <p className="mt-10 font-mono text-sm leading-relaxed text-neutral-400 max-w-[320px] text-center">
+                <h3 className="mt-8 font-sans text-xl font-bold text-white">{myDate[2].name}</h3>
+                <p className="mt-10 font-sans text-sm leading-relaxed text-neutral-400 max-w-[320px] text-center">
                   {myDate[2].description}
                 </p>
                 <a
                   href="/CV-vincenzo-tulimieri.pdf"
                   download="CV_Vincenzo_Tulimieri.pdf"
-                  className="mt-5 inline-flex items-center justify-center px-8 py-3 border border-white/20 rounded-full bg-white/5 text-white font-mono text-sm hover:bg-white hover:text-black transition-all duration-300 gap-2 group"
+                  className="mt-5 inline-flex items-center justify-center px-8 py-3 border border-white/20 rounded-full bg-white/5 text-white font-sans text-sm hover:bg-white hover:text-black transition-all duration-300 gap-2 group"
                 >
                   <Download size={18} className="group-hover:animate-bounce" />
                   <span>Scarica CV</span>
