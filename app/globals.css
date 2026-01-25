@@ -237,3 +237,7 @@ html{
     @apply bg-background text-foreground;
   }
 }
+body{
+  font-family: sans-serif
+}
+
