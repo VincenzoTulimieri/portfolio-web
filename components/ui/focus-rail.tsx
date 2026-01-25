@@ -239,8 +239,8 @@ export function FocusRail({
           })}
 
         </motion.div>
-        <div className="mx-auto mt-12 flex w-full max-w-4xl flex-col items-center justify-between gap-6 md:flex-row pointer-events-auto">
-          <div className="flex flex-1 flex-col items-center text-center md:items-start md:text-left h-[320px] sm:h-[280px] md:h-[200px] lg:h-[180px] justify-start pt-4 overflow-visible">
+        <div className="mx-auto mt-12 flex w-full max-w-4xl flex-col items-stretch justify-between gap-6 md:flex-row pointer-events-auto">
+          <div className="flex flex-1 flex-col items-center text-center md:items-start md:text-left h-[380px] sm:h-[300px] md:h-[200px] justify-start pt-4 w-full">
             <AnimatePresence mode="wait">
               <motion.div
                 key={activeItem.id}
@@ -248,7 +248,7 @@ export function FocusRail({
                 animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
                 exit={{ opacity: 0, y: -10, filter: "blur(4px)" }}
                 transition={{ duration: 0.3 }}
-                className="space-y-2"
+                className="space-y-2 w-full h-full flex flex-col items-center md:items-start"
               >
                 {activeItem.meta && (
                   <span className="text-xs font-medium uppercase tracking-wider text-emerald-400">
@@ -267,8 +267,8 @@ export function FocusRail({
             </AnimatePresence>
           </div>
 
-          <div className="flex items-center gap-4">
-            <div className="flex items-center gap-1 rounded-full bg-neutral-900/80 p-1 ring-1 ring-white/10 backdrop-blur-md z-60">
+          <div className="flex items-center justify-center md:justify-start gap-4 md:pt-4">
+            <div className="flex items-center gap-1 rounded-full bg-neutral-900/80 p-1 ring-1 ring-white/10 backdrop-blur-md">
               <button
                 onClick={(e) =>{
                   e.stopPropagation()
