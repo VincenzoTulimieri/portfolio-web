@@ -147,7 +147,7 @@ export default function Home() {
         <div className="mb-12 text-center">
           <h1 className="text-4xl font-bold text-white mb-2">I Miei Progetti</h1>
         </div>
-        <FocusRail items={projects} autoPlay={false} loop={true} />
+        <FocusRail items={projects} autoPlay={true} loop={true} />
       </section>
     </>
   );
