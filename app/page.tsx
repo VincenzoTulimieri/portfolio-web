@@ -28,12 +28,12 @@ const projects: FocusRailItem[] = [
   },
   {
     id: 3,
-    title: "Spotyfy",
-    description: "Layout dell'applicazione web Spotify realizzato completamente in HTML e CSS vanilla, senza framework o componenti preconfezionati. Il progetto mette in evidenza la capacità di costruire interfacce responsive partendo dalle basi, con attenzione a struttura semantica, adattabilità su diversi dispositivi e fedeltà al design.",
-    meta: "HTML • CSS • Resposive",
-    videoSrc: "/video-spotify.mkv",
-    imageSrc: "/spotify-layout.png",
-    href: "https://github.com/VincenzoTulimieri/html-css-spotifyweb/tree/main/day-3",
+    title: "Movie Time",
+    description: "Movie Time è una web application full stack sviluppata interamente da zero, che permette agli utenti di scoprire, recensire e gestire una raccolta di film. L’applicazione offre un’esperienza completa: dalla navigazione dei film disponibili fino all’interazione diretta tramite recensioni e inserimento di nuovi contenuti. Il design è stato realizzato con uno stile moderno e ispirato alle piattaforme di streaming, con particolare attenzione alla user experience. Questo progetto è stato realizzato per consolidare competenze nello sviluppo full stack, nella progettazione di API REST e nella gestione dei dati lato server.Particolare attenzione è stata dedicata all’integrazione tra frontend e backend, alla gestione dello stato e alla creazione di un’interfaccia utente moderna.",
+    meta: "HTML • CSS • JavaScript • React js • Bootstrap • Node js • MySql",
+    videoSrc: "/video-movieTime.mkv",
+    imageSrc: "/Screenshot-home-movieTime.png",
+    href: "https://github.com/VincenzoTulimieri/htmlcss-dropboxr",
   },
   {
     id: 4,
@@ -46,12 +46,12 @@ const projects: FocusRailItem[] = [
   },
   {
     id: 5,
-    title: "Movie Time",
-    description: "Movie Time è una web application full stack sviluppata interamente da zero, che permette agli utenti di scoprire, recensire e gestire una raccolta di film. L’applicazione offre un’esperienza completa: dalla navigazione dei film disponibili fino all’interazione diretta tramite recensioni e inserimento di nuovi contenuti. Il design è stato realizzato con uno stile moderno e ispirato alle piattaforme di streaming, con particolare attenzione alla user experience. Questo progetto è stato realizzato per consolidare competenze nello sviluppo full stack, nella progettazione di API REST e nella gestione dei dati lato server.Particolare attenzione è stata dedicata all’integrazione tra frontend e backend, alla gestione dello stato e alla creazione di un’interfaccia utente moderna.",
-    meta: "HTML • CSS • JavaScript • React js • Bootstrap • Node js • MySql",
-    videoSrc: "/video-movieTime.mkv",
-    imageSrc: "/Screenshot-home-movieTime.png",
-    href: "https://github.com/VincenzoTulimieri/htmlcss-dropboxr",
+    title: "Spotyfy",
+    description: "Layout dell'applicazione web Spotify realizzato completamente in HTML e CSS vanilla, senza framework o componenti preconfezionati. Il progetto mette in evidenza la capacità di costruire interfacce responsive partendo dalle basi, con attenzione a struttura semantica, adattabilità su diversi dispositivi e fedeltà al design.",
+    meta: "HTML • CSS • Resposive",
+    videoSrc: "/video-spotify.mkv",
+    imageSrc: "/spotify-layout.png",
+    href: "https://github.com/VincenzoTulimieri/html-css-spotifyweb/tree/main/day-3",
   }
 ];
 
