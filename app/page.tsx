@@ -38,10 +38,19 @@ const projects: FocusRailItem[] = [
   {
     id: 4,
     title: "Dropbox",
-    description: "Layout del sito web Dropbox  sviluppato completamente in HTML e CSS vanilla, senza l’uso di framework o componenti predefiniti. Il progetto mette in evidenza la capacità di strutturare un’interfaccia web curando layout, gerarchia visiva e organizzazione dei contenuti, partendo dalle basi del front-end",
+    description: "Layout del sito web Dropbox  sviluppato completamente in HTML e CSS vanilla, senza l’uso di framework o componenti predefiniti. Il progetto mette in evidenza la capacità di strutturare un’interfaccia web curando layout, gerarchia visiva e organizzazione dei contenuti, partendo dalle basi del front-end.",
     meta: "HTML • CSS",
     videoSrc: "/video-dropbox.mkv",
     imageSrc: "/screenshot-dropbox.png",
+    href: "https://github.com/VincenzoTulimieri/htmlcss-dropboxr",
+  },
+  {
+    id: 5,
+    title: "Movie Time",
+    description: "Movie Time è una web application full stack sviluppata interamente da zero, che permette agli utenti di scoprire, recensire e gestire una raccolta di film. L’applicazione offre un’esperienza completa: dalla navigazione dei film disponibili fino all’interazione diretta tramite recensioni e inserimento di nuovi contenuti. Il design è stato realizzato con uno stile moderno e ispirato alle piattaforme di streaming, con particolare attenzione alla user experience. Questo progetto è stato realizzato per consolidare competenze nello sviluppo full stack, nella progettazione di API REST e nella gestione dei dati lato server.Particolare attenzione è stata dedicata all’integrazione tra frontend e backend, alla gestione dello stato e alla creazione di un’interfaccia utente moderna.",
+    meta: "HTML • CSS • JavaScript • React js • Bootstrap • Node js • MySql",
+    videoSrc: "/video-movieTime.mkv",
+    imageSrc: "/Screenshot-home-movieTime.png",
     href: "https://github.com/VincenzoTulimieri/htmlcss-dropboxr",
   }
 ];
