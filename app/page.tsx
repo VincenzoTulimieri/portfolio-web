@@ -46,7 +46,7 @@ const projects: FocusRailItem[] = [
   },
   {
     id: 5,
-    title: "Spotyfy",
+    title: "Spotify",
     description: "Layout dell'applicazione web Spotify realizzato completamente in HTML e CSS vanilla, senza framework o componenti preconfezionati. Il progetto mette in evidenza la capacità di costruire interfacce responsive partendo dalle basi, con attenzione a struttura semantica, adattabilità su diversi dispositivi e fedeltà al design.",
     meta: "HTML • CSS • Resposive",
     videoSrc: "/video-spotify.mkv",
